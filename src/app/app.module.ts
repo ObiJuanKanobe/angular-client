@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DataDemoModule } from './shared/data-demo/data-demo.module';
 import { ModuleRouting } from './shared/data-demo/data-demo-routing.module';
 import { RouterModule } from '@angular/router';
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    ModuleRouting,
     DataDemoModule,
+    ModuleRouting,
     MatProgressBarModule,
     MatSnackBarModule,
     MatPaginatorModule,

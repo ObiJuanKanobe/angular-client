@@ -2,28 +2,35 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Supplier } from 'src/app/supplier';
 import { SupplierService } from '../../services/supplier.service';
-import { MatTableDataSource } from '@angular/material';
-import { RepositionScrollStrategy } from '@angular/cdk/overlay';
-import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
+import { MatTable, MatTableDataSource } from '@angular/material';
 
 @Component({
-  selector: 'app-demo',
+  selector: 'app-supplier',
   templateUrl: './supplier.component.html',
   styleUrls: ['./supplier.component.scss']
 })
 export class SupplierComponent implements OnInit {
 
+  displayedColumns: string[] = [
+    'Id',
+    'CompanyName',
+    'ContactName',
+    'ContactTitle',
+    'City',
+    'Country',
+    'Phone',
+    'Fax' ];
   suppliers: Supplier[];
-  displayedColumns: string[] = [ 'company', 'contact', 'city', 'country', 'phone', 'fax' ];
   dataSource: MatTableDataSource<Supplier>;
   constructor(public supplierService: SupplierService) {}
+
   ngOnInit() {
     this.getSuppliers().subscribe(response => {
       if ( !response ) {
         return;
       }
       this.suppliers = response;
-      this.dataSource = new MatTableDataSource(response);
+      this.dataSource = new MatTableDataSource( this.suppliers );
     });
   }
 
