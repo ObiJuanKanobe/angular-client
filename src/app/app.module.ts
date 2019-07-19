@@ -5,7 +5,6 @@ import { routing } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatPaginatorModule, MatProgressBarModule, MatSnackBarModule, MatSortModule, MatTableModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiService } from './api.service';
 import { DataDemoModule } from './shared/data-demo/data-demo.module';
 import { ModuleRouting } from './shared/data-demo/data-demo-routing.module';
 import { RouterModule } from '@angular/router';
@@ -28,7 +27,6 @@ import { RouterModule } from '@angular/router';
     routing,
     RouterModule.forRoot([])
   ],
-  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

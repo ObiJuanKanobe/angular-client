@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DemoComponent } from './components/demo/demo.component';
+import { SupplierComponent } from './components/suppliers/supplier.component';
 import { ModuleRouting } from './data-demo-routing.module';
 
 
+
 @NgModule({
-  declarations: [DemoComponent],
+  declarations: [SupplierComponent],
   imports: [
     CommonModule,
     ModuleRouting
