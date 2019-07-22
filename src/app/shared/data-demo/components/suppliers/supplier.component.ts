@@ -10,7 +10,7 @@ import { Supplier } from '../../interfaces/supplier';
   templateUrl: './supplier.component.html',
   styleUrls: ['./supplier.component.scss']
 })
-export class SupplierComponent implements AfterViewInit, OnInit {
+export class SupplierComponent implements OnInit {
 
   dataSource: MatTableDataSource<Supplier>;
   displayedColumns: string[] = [
@@ -26,7 +26,7 @@ export class SupplierComponent implements AfterViewInit, OnInit {
   suppliers: Supplier[];
   constructor(public supplierService: SupplierService) {}
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.getSuppliers().subscribe(response => {
       if ( !response ) {
         console.log( 'didnt grab anything.' );
@@ -34,12 +34,7 @@ export class SupplierComponent implements AfterViewInit, OnInit {
       }
       this.suppliers = response;
       this.dataSource = new MatTableDataSource( this.suppliers );
-      console.log(this.suppliers);
-      console.log(this.dataSource);
     });
-  }
-  ngOnInit() {
-
   }
 
   public getSuppliers() {
