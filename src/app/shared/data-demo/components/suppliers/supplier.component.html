@@ -1,38 +1,41 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     
-    <ng-container matColumDef="Id">
-       <mat-header-cell *matHeaderCelldef>Id</mat-header-cell>
-        <mat-cell *matCellDef ="let element">{{element.Id}}</mat-cell>
-    </ng-container>
-    <ng-container matColumDef="CompanyName">
-       <th mat-header-cell *matHeaderCelldef>Company Name</th>
+    <ng-container matColumnDef="CompanyName">
+       <th mat-header-cell *matHeaderCellDef>Company Name</th>
         <td mat-cell *matCellDef ="let element">{{element.CompanyName}}</td>
     </ng-container>
-    <ng-container matColumDef="ContactName">
-       <th mat-header-cell *matHeaderCelldef>Contact Name</th>
+    
+    <ng-container matColumnDef="ContactName">
+        <th mat-header-cell *matHeaderCellDef>Contact Name</th>
         <td mat-cell *matCellDef ="let element">{{element.ContactName}}</td>
     </ng-container>
-    <ng-container matColumDef="ContactTitle">
-       <th mat-header-cell *matHeaderCelldef>Contact Title</th>
+    
+    <ng-container matColumnDef="ContactTitle">
+       <th mat-header-cell *matHeaderCellDef>Contact Title</th>
         <td mat-cell *matCellDef ="let element">{{element.ContactTitle}}</td>
     </ng-container>
-    <ng-container matColumDef="City">
-       <th mat-header-cell *matHeaderCelldef>City</th>
+    
+    <ng-container matColumnDef="City">
+       <th mat-header-cell *matHeaderCellDef>City</th>
         <td mat-cell *matCellDef ="let element">{{element.City}}</td>
     </ng-container>
-    <ng-container matColumDef="Country">
-       <th mat-header-cell *matHeaderCelldef>Country</th>
+    
+    <ng-container matColumnDef="Country">
+       <th mat-header-cell *matHeaderCellDef>Country</th>
         <td mat-cell *matCellDef ="let element">{{element.Country}}</td>
     </ng-container>
-    <ng-container matColumDef="Phone">
-       <th mat-header-cell *matHeaderCelldef>Phone</th>
+    
+    <ng-container matColumnDef="Phone">
+       <th mat-header-cell *matHeaderCellDef>Phone</th>
         <td mat-cell *matCellDef ="let element">{{element.Phone}}</td>
     </ng-container>
-    <ng-container matColumDef="Fax">
-       <th mat-header-cell *matHeaderCelldef>Fax</th>
+    
+    <ng-container matColumnDef="Fax">
+       <th mat-header-cell *matHeaderCellDef>Fax</th>
         <td mat-cell *matCellDef ="let element">{{element.Fax}}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
 </table>

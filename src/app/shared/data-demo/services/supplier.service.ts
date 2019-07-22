@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { OrderProducts } from 'src/app/order-products';
 import { environment } from 'src/environments/environment';
-import { Supplier } from 'src/app/supplier';
+import { Supplier } from '../interfaces/supplier';
 
 @Injectable({
   providedIn: 'root'

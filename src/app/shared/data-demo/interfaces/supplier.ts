@@ -1,12 +1,11 @@
-export class Supplier {
-    Id: number;
+export interface Supplier {
+    City: string;
     CompanyName: string;
     ContactName: string;
     ContactTitle: string;
-    City: string;
     Country: string;
-    Phone: string;
     Fax: string;
+    Id: number;
+    Phone: string;
 }
-
 

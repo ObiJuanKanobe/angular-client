@@ -14,7 +14,6 @@ import { CdkCell, CdkColumnDef } from '@angular/cdk/table';
     CommonModule,
     ModuleRouting,
     MatTableModule,
-  ],
-providers: [CdkColumnDef]
+  ]
 })
 export class DataDemoModule { }
