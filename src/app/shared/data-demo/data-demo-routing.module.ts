@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SupplierComponent } from './components/suppliers/supplier.component';
+import { DemoComponent } from './components/demo/demo.component';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 
 
 const routes: Routes = [
   {
-    path: 'suppliers',
-    component: SupplierComponent
+    path: '/data-demo',
+    component: DemoComponent
   }
 ];
 

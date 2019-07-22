@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { routing } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatPaginatorModule, MatProgressBarModule, MatSnackBarModule, MatSortModule, MatTableModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatPaginatorModule, MatProgressBarModule, MatSnackBarModule, MatSortModule, MatTableModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
 import { DataDemoModule } from './shared/data-demo/data-demo.module';
 import { ModuleRouting } from './shared/data-demo/data-demo-routing.module';
 import { RouterModule } from '@angular/router';
-
 
 @NgModule({
   declarations: [
@@ -17,17 +17,18 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    ModuleRouting,
     DataDemoModule,
-    HttpClientModule,
-    MatInputModule,
-    MatTableModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
     MatPaginatorModule,
     MatSortModule,
-    MatProgressSpinnerModule,
+    MatTableModule,
     HttpClientModule,
     routing,
     RouterModule.forRoot([])
   ],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
