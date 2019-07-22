@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DemoComponent } from './components/demo/demo.component';
+import { SupplierComponent } from './components/suppliers/supplier.component';
 import { ModuleRouting } from './data-demo-routing.module';
+import { AppModule } from 'src/app/app.module';
+import { MatTableModule } from '@angular/material';
+import { CdkCell, CdkColumnDef } from '@angular/cdk/table';
+
 
 
 @NgModule({
-  declarations: [DemoComponent],
+  declarations: [SupplierComponent],
   imports: [
     CommonModule,
-    ModuleRouting
+    ModuleRouting,
+    MatTableModule,
   ]
 })
 export class DataDemoModule { }

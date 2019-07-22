@@ -1,4 +1,5 @@
-import { Supplier } from './supplier';
+import { Supplier } from './shared/data-demo/interfaces/supplier';
+
 
 export class Product {
     Id: number;
